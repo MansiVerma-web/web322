@@ -1,0 +1,297 @@
+.body{
+    background-color: rgb(230, 248, 248);
+    width: 100%;
+}
+.cover{
+    overflow: initial;
+    background-image: url('image/bnb.png');
+    background-size: cover;
+    background-position: fixed;
+}
+#header{
+    display: inline-block;
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    
+   
+}
+
+
+
+
+
+#header span {
+    float: left;
+    padding: 0px;
+    padding-top: 90px;
+    padding-right: 29%;
+    padding-left: 18px;
+    font-family: sans-serif;
+    font-size: larger;
+}
+
+#header a{
+    display: inline;
+    float: left;
+    padding: 15px;
+    text-decoration: none;
+    left: 100px;
+    color: tomato;
+}
+#header a:hover{
+    background-color: tomato;
+    color: white;
+    border-radius: 20px;
+}
+
+#header a.a1{
+    float: right;
+}
+
+#header a.a2{
+    float: right;
+}
+
+#navigation{
+    margin-top: -50px;
+    height: 700px;
+    width: 100%;
+    background-image: url(/img/navigation.jpg);
+    background-size: cover;
+}
+
+#navigation p{
+    font-size: 50px;
+margin-left: 400px;
+padding-top: 100px;
+font-family: cursive;
+
+}
+
+#navigation button {
+    height: 73px;
+    margin-top: -20px;
+    margin-left: 588px;
+    padding: 30px;
+    font-size: larger;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    font-family: cursive;
+}
+
+
+
+#form-1{
+    display: grid;
+    padding: 20px;
+    width: 25%;
+    height: 450px;
+    padding-left: 40%;
+}
+#form-1 label{
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    padding: 3px;
+    font-weight: bold;
+}
+#form-1 input[type=text], input[type=number]{
+    size: 25px;
+    width: 320px;
+    height: 25px;
+    padding: 2px;
+}
+
+#form-1 input[type=datetime]{
+    width: 120px;
+    height: 25px;
+}
+
+#form-1 input[type=submit]{
+    border: none;
+    background-color: rgba(255, 8, 0, 0.774);
+    color:white;
+    width: 100px;
+    height: 43px;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+
+#lab3{
+    padding-top: 20px;
+    padding-left: 228px;
+}
+
+
+#lab{
+    display: inline-flex;
+    padding-top: 6px;
+}
+
+
+#h1-tr{
+    text-align: center;
+    color: white;
+    background-color: tomato;
+    padding: 5px;
+    height: 300px;
+    padding-bottom: 25px;
+}
+
+#h1-tr h2{
+    padding-bottom: 0px;
+padding-top: 50px;
+font-family: cursive;
+font-size: xx-large;
+
+}
+
+#h1-tr p{
+    font-family: cursive;
+font-size: large;
+
+}
+
+#h1-tr button{
+    font-size: 13px;
+    padding: 10px;
+    border: 1px solid black; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+#promo{
+    display: inline-flex;
+    width: 100%;
+    height: 570px;
+    
+}
+
+.p1{
+    height: 500px;
+    width: 300px;
+    margin-left: 95px;
+    float: left;
+
+}
+
+.p1 p{
+    margin-left: 130px;
+    font-size: xx-large;
+    font-family: cursive;
+    color: tomato;
+}
+
+
+#promo img{
+    width: 300px;
+    height: 235px;
+    border-radius: 15px;
+}
+
+.promo-con{
+    width: 100%;
+    margin-top: 390px;
+    margin-left: -1096px;
+}
+
+.promo-con p{
+    font-size: x-large;
+    font-family: cursive;
+    color: tomato;
+    margin-top: -35px;
+}
+
+#info{
+    display: block;
+    padding: 20px;
+    height: 620px;
+    padding-left: 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+#info p{
+    float: right;
+    padding-right: 13%;
+    font-size: 22px;
+    font-style: initial;
+
+}
+
+.img1{
+    width: 40%;
+    height: 250px;
+    float: left;
+    margin-left: 21px;
+    
+}
+.img1 img{
+    width: 100%;
+    height: 250px;
+}
+
+footer{
+    display: inline-flexbox;
+    background-color: tomato;
+    color: white;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+
+}
+
+#about{
+    padding: 30px;
+    padding-left: 160px;
+}
+
+#about button{
+    width: 14%;
+    border-radius: 48%;
+    background-color: white;
+    /* color: tomato; */
+    border: 2px;
+    padding: 7px;
+    margin-left: 27px;
+}
+
+#about button p{
+    color: tomato;
+}
+
+
+#icon-menu{
+    text-align: center;
+    padding: 10px;
+    background-color: tomato;
+    color:white;
+    width: auto;
+  }
+  
+  
+  #last-f{
+      background-color: tomato;
+      text-align: center;
+      color:white;
+      text-decoration: none;
+      padding: 10px;
+  }  
+
+
+
+
+
+
