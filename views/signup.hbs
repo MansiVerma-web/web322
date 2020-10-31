@@ -1,208 +1,30 @@
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-
-
-
-
-    /* Full-width input fields */
-    input[type=text],
-    input[type=password] {
-      width: 100%;
-      padding: 15px;
-      margin: 5px 0 22px 0;
-      display: inline-block;
-      border: none;
-      background: #f1f1f1;
-    }
-
-    /* Add a background color when the inputs get focus */
-    input[type=text]:focus,
-    input[type=password]:focus {
-      background-color: #ddd;
-      outline: none;
-    }
-
-    /* Set a style for all buttons */
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      opacity: 0.9;
-    }
-
-    button:hover {
-      opacity: 1;
-    }
-
-    /* Extra styles for the cancel button */
-    .cancelbtn {
-      padding: 14px 20px;
-      background-color: #f44336;
-    }
-
-    #pop-up {
-
-
-      padding: 30px;
-      margin: 200px;
-      overflow: auto;
-    }
-
-    #pop-up input[type=text],
-    input[type=email],
-    input[type=password] {
-
-      width: 40%;
-      height: 30px;
-      margin: 3px;
-
-
-    }
-
-    #pop-up input[type=month],
-    input[type=year],
-    input[type=date] {
-
-      width: 12.8%;
-      height: 30px;
-      margin: 0;
-
-    }
-
-    #pop-up input[type=submit] {
-
-      width: 40%;
-      height: 35px;
-      font-weight: bolder;
-      background-color: rgb(19, 204, 96);
-      color: black;
-      border: none;
-      border-radius: 10px;
-      font-size: 15px;
-      margin-bottom: 23px;
-
-    }
-
-
-
-    /* Float cancel and signup buttons and add an equal width */
-    .cancelbtn,
-    .signupbtn {
-      float: left;
-      width: 50%;
-    }
-
-    /* Add padding to container elements */
-    .container {
-      padding: 16px;
-    }
-
-    /* The Modal (background) */
-    .modal {
-      display: none;
-      /* Hidden by default */
-      position: fixed;
-      /* Stay in place */
-      z-index: 1;
-      /* Sit on top */
-      left: 0;
-      top: 0;
-      width: 100%;
-      /* Full width */
-      height: 100%;
-      /* Full height */
-      overflow: auto;
-      /* Enable scroll if needed */
-      background-color: #474e5d;
-      padding-top: 50px;
-    }
-
-    /* Modal Content/Box */
-    .modal-content {
-      background-color: #fefefe;
-      margin: 5% auto 15% auto;
-      /* 5% from the top, 15% from the bottom and centered */
-      border: 1px solid #888;
-      width: 80%;
-      /* Could be more or less, depending on screen size */
-    }
-
-    /* Style the horizontal ruler */
-    hr {
-      border: 1px solid #f1f1f1;
-      margin-bottom: 25px;
-    }
-
-    /* The Close Button (x) */
-    .close {
-      position: absolute;
-      right: 35px;
-      top: 15px;
-      font-size: 40px;
-      font-weight: bold;
-      color: #f1f1f1;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #f44336;
-      cursor: pointer;
-    }
-
-    /* Clear floats */
-    .clearfix::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    /* Change styles for cancel button and signup button on extra small screens */
-    @media screen and (max-width: 300px) {
-
-      .cancelbtn,
-      .signupbtn {
-        width: 100%;
-      }
-    }
-  </style>
-
+<link rel="stylesheet" href="style/style3.css">
       <div id="pop-up">
         <form style="text-align: center;" method="POST" action="/signup">
           <h3 style="text-align: center;">Sign up with <span style="color: cadetblue;">Facebook</span> or <span
-              style="color: cadetblue;">Go--ogle</span> </h3>
-          <p>or</p>
+              style="color: cadetblue;">Google</span> </h3>
+          <h2>or</h2>
           <input type="email" placeholder="Email address" id="email" name="email" value="{{data.email}}"><br>
           {{#if errors.email}}
-          <p>{{errors.email}}</p>
+          <p style="color: tomato; font-family: cursive;" >{{errors.email}}</p>
           {{/if}}
           <input type="text" placeholder="First name" name="firstName" value="{{data.firstName}}"><br>
           {{#if errors.firstName}}
-          <p>{{errors.firstName}}</p>
+          <p style="color: tomato; font-family: cursive;">{{errors.firstName}}</p>
           {{/if}}
           <input type="text" placeholder="Last name" name="lastName" value="{{data.lastName}}"><br>
           {{#if errors.lastName}}
-          <p>{{errors.lastName}}</p>
+          <p style="color: tomato; font-family: cursive;">{{errors.lastName}}</p>
           {{/if}}
           <input type="password" placeholder="Create a Pasword" name="password" value="{{data.password}}"><br>
           {{#if errors.password}}
-          <p>{{errors.password}}</p>
+          <p style="color: tomato; font-family: cursive;">{{errors.password}}</p>
           {{/if}}
-          <p>Birthday</p>
-          <p>To sign up, you need to be at least 18. Other people who use Airbnb won't see<br> your birthday.</p>
+          <p style="font-family: cursive;">Birthday</p>
+          <p style="font-family: cursive;">To sign up, you need to be at least 18. Other people who use Airbnb won't see<br> your birthday.</p>
           <input type="month" name="month" placeholder="Month "> <input type="date" name="date" placeholder="Date"> <input type="year"
             placeholder="Year" name ="year">
-          <p>We'll send you marketing promotions, speacial offers, inspiration, and policy <br> updates via email.</p>
+          <p style="font-family: cursive;">We'll send you marketing promotions, speacial offers, inspiration, and policy <br> updates via email.</p>
           <input type="submit" value="Sign up">
         </form>
       </div>
