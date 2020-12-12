@@ -1,0 +1,25 @@
+<!--
+--Name - Mansi Verma
+--Seneca ID - 141641191
+--Seneca Email - mverma37@myseneca.ca
+--Date - 31 October 2020
+
+Did all the .hbs .js Node and Express by myself. Got help for photos from unsplash which is really a helpful site.
+-->
+<link rel="stylesheet" href="style/style3.css">
+      <div id="pop-up">
+        <form style="text-align: center;" method="POST" action="/login">
+          <h3 style="text-align: center;">Sign up with <span style="color: cadetblue;">Facebook</span> or <span
+              style="color: cadetblue;">Google</span> </h3>
+          <h2>or</h2>
+          <input type="email" placeholder="Email address" id="email" name="email" value="{{data.email}}"><br>
+          {{#if errors.email}}
+          <p style="color: tomato; font-family: cursive;" >{{errors.email}}</p>
+          {{/if}}
+          <input type="password" placeholder="Create a Pasword" name="password" value="{{data.password}}"><br>
+          {{#if errors.password}}
+          <p style="color: tomato; font-family: cursive;">{{errors.password}}</p>
+          {{/if}}
+          <input type="submit" value="Login">
+        </form>
+      </div>

@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="style/style4.css">
+<div style="text-align: center;">
+    <h2>Hello, {{user.firstName}}</h2>
+    <br><br>
+    <p>This is your to manage Rooms:</p>
+</div>
+<div><br><br>
+    <form action="/create-room" method="post" enctype="multipart/form-data">
+        <label for="title">Title</label><br>
+        <input type="text" name="title" id="title">
+        <br><br>
+        <label for="detail">Detail</label><br>
+        <input type="text" name="detail" id="detail"><br><br>
+        <label for="price">Price</label><br>
+        <input type="text" name="price" id="price"><br><br>
+        <label for="price">Rating</label><br>
+        <input type="text" name="rate" id="rate"><br><br>
+        <label for="price">Picture</label><br>
+        <input type="file" name="pic" id="pic"><br><br>
+        <input type="submit" value="Create Room">
+    </form>
+</div>
+
+<br><br><br>
+<div>
+    <table>
+        <thead>
+            <th>Title</th>
+            <th>Detail</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </thead>
+        <tbody>
+        {{#each rooms}}
+         <tr>
+            <th>{{title}}</th>
+            <th>{{detail}}</th>
+            <th>{{price}}</th>
+            <th>{{rate}}</th>
+            <th><form method="POST" action="/view-update"><input type="text" name="id" id="id" value="{{_id}}" hidden><input type="submit" value="Update"></form></th>
+            <th><form method="POST" action="/delete"><input type="text" name="id"  id="id" value="{{_id}}" hidden><input type="submit" value="Delete"></form></th>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>

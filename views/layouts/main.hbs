@@ -1,3 +1,12 @@
+<!--
+--Name - Mansi Verma
+--Seneca ID - 141641191
+--Seneca Email - mverma37@myseneca.ca
+--Date - 31 October 2020
+Did all the .hbs .js Node and Express by myself. Got help for photos from unsplash which is really a helpful site.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,13 +36,27 @@
       <a href="#">
         <h2>Online Experiences</h2>
       </a>
-
+      {{#if user}}
+        {{#if user.host}}
+        <a style="float: right;" href="/host">
+          <h2>Host</h2>
+        </a>
+        {{else}}
+        <a style="float: right;" href="/profile">
+          <h2>Profile</h2>
+        </a>
+        {{/if}}
+        <a style="float: right;" href="/logout">
+          <h2>Logout</h2>
+        </a>
+      {{else}}
       <a style="float: right;" href="/signup">
         <h2>Sign in</h2>
       </a>
-      <a style="float: right;" href="/signup">
+      <a style="float: right;" href="/login">
         <h2>Log in</h2>
       </a>
+      {{/if}}
 
     </div>
 

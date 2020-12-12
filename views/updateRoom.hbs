@@ -1,0 +1,17 @@
+<div><br><br>
+    <form action="/update-room" method="post" enctype="multipart/form-data">
+        <label for="title">Title</label><br>
+        <input type="text" name="id" id="id" hidden value="{{room._id}}">
+        <input type="text" name="title" id="title" value="{{room.title}}">
+        <br><br>
+        <label for="detail">Detail</label><br>
+        <input type="text" name="detail" id="detail" value="{{room.detail}}"><br><br>
+        <label for="price">Price</label><br>
+        <input type="text" name="price" id="price" value="{{room.price}}"><br><br>
+        <label for="price">Rating</label><br>
+        <input type="text" name="rate" id="rate" value="{{room.rate}}"><br><br>
+        <label for="price">Picture</label><br>
+        <input type="file" name="pic" id="pic"><br><br>
+        <input type="submit" value="Update Room">
+    </form>
+</div>

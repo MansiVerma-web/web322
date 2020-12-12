@@ -1,5 +1,28 @@
+<!--
+--Name - Mansi Verma
+--Seneca ID - 141641191
+--Seneca Email - mverma37@myseneca.ca
+--Date - 31 October 2020
+Did all the .hbs .js Node and Express by myself. Got help for photos from unsplash which is really a helpful site.
+-->
+
 <link rel="stylesheet" href="style/style2.css">
 <div class="grid-container">
+
+  {{#each rooms}}
+  <div id="room{{_id}}">
+    <img src="/img/new/{{img}}" alt="room{{_id}}">
+    <p style="font-weight: bold;">{{title}}</p>
+    <p>{{detail}}</p>
+    <P>${{price}} CAD/night</P>
+    <p><span>*</span>{{rate}}(363) - Super</p>
+    <form action="/roompage" method="POST" enctype="multipart/form-data">
+      <input type="text" name="id" id="id" value="{{_id}}" hidden>
+      <input type="submit" value="Book!">
+    </form>
+  </div>
+
+  {{/each}}
 
   <div id="room1">
     <img src="/img/room1.jpg" alt="room1">

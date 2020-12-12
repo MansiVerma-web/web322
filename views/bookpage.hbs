@@ -1,0 +1,43 @@
+
+ 
+ <br><br> <div id="room{{_id}}">
+    <img src="/img/new/{{room.img}}" alt="room{{room._id}}">
+    <p style="font-weight: bold;">{{room.title}}</p>
+    <p>{{room.detail}}</p>
+    <P >$<span id="roomprice" >{{room.price}}</span> CAD/night</P>
+    <p><span>*</span>{{room.rate}}(363) - Super</p>
+    <form action="/book" method="POST" enctype="multipart/form-data">
+      <p><label for="checkin">Check-in Date</label></p>
+      <p><input type="date" name="checkin" id="checkin"></p>
+      <p><label for="checkout">Check-Out Date</label></p>
+      <p><input type="date" name="checkout" id="checkout"></p>
+      <p>Number of nights:</p>
+      <p id="nights">nights</p>
+      <p>Total Price:</p>
+      <p id="total"></p>
+      <input type="text" name="id" id="id" value="{{room._id}}" hidden>
+      <input type="submit" value="Book!">
+    </form>
+  </div>
+
+   <script>
+     var checkin = document.getElementById("checkin");
+     var checkout = document.getElementById("checkout");
+
+     function calculateDays(){
+        var dayIn = new Date(checkin.value);
+        var dayOut = new Date(checkout.value);
+
+        var night = document.getElementById("nights")
+        var price = document.getElementById("total")
+        console.log(dayIn)
+        console.log(dayOut)
+        let days =  Math.ceil((dayOut-dayIn) / (1000 * 60 * 60 * 24));
+        night.innerHTML = days;
+        let listPrice = document.getElementById("roomprice").innerHTML;
+       
+        price.innerHTML = days * listPrice;
+     }
+     checkout.onchange = calculateDays;
+
+ </script>
